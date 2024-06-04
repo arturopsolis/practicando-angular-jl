@@ -1,0 +1,26 @@
+
+
+.menor{
+    color: red;
+}
+
+.mayor{
+    color: green;
+}
+
+.error{
+    color: red;
+    font-weight: bold;
+    font-size: 60px;
+
+    span{
+        font-size: 10px;
+        color: blue;
+        @media (max-width: 575.98px) {
+            font-size: 20px;
+        }
+    }
+}
+
+
+
