@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ProductsService } from '../services/products.service';
 
 @Component({
   selector: 'app-mi-componente',
@@ -7,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class MiComponenteComponent {
 
-  frutas = ["manzana", "pera", "mango"];
+  frutas = this.products.getFruits();
   nombre = "Mi Tienda de Frutas";
   personas = [
     {
@@ -33,6 +34,8 @@ export class MiComponenteComponent {
   error = false;
 
   limiteDeEdad = 18;
+
+  constructor(public products: ProductsService){}
 
   evaluaEdad(edad:number): string{
     if( edad < this.limiteDeEdad){
